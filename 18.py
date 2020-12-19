@@ -1,47 +1,4 @@
 
-"""
-def solve(expr, visited):
-    print("...")
-    last_sign = None
-    result = None
-    for i in range(len(expr)):
-        print(f"i:{i}, expr: '{expr}', expr[i] = {expr[i]}, result: {result}")
-        if visited[i]:
-            continue
-        if expr[i][0] == '(':
-            expr[i] = expr[i][1:]
-            inside = solve(expr[i:], visited)
-            # print(f"right is {right_side}")
-            # print(result, right_side)
-            if not result:
-                # print("1result = ", inside)
-                result = inside
-            else:
-                result = result + inside if last_sign == '+' else result * inside
-        elif expr[i][-1] == ')':
-            print(f"{result} {last_sign} {int(expr[i][:-1])}")
-            print('1return', result + int(expr[i][:-1]) if last_sign == '+' else result * int(expr[i][:-1]))
-            visited[i] = True
-            return result + int(expr[i][:-1]) if last_sign == '+' else result * int(expr[i][:-1])
-
-        elif expr[i] == '+':
-            last_sign = '+'
-        elif expr[i] == '*':
-            last_sign = '*'
-        else:
-            if not result:
-                # print('2result = ', int(expr[i]))
-                result = int(expr[i])
-            else:
-                print(f"{result} {last_sign} {int(expr[i])}")
-                # print('3result = ', result + int(expr[i]) if last_sign == '+' else result * int(expr[i]))
-                result = result + int(expr[i]) if last_sign == '+' else result * int(expr[i])
-        visited[i] = True
-    print('2return', result)
-    return result
-"""
-
-
 def task1(expressions):
     result_sum = 0
 
@@ -115,7 +72,7 @@ def run():
         for line in lines:
             expressions.append(line.replace("(", "( ").replace(")", " )").split(" "))
 
-        # print(task1(expressions))
+        print(task1(expressions))
         print(task2(expressions))
 
 

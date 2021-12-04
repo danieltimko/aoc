@@ -31,7 +31,7 @@ def print_boards(boards):
         print('-')
 
 
-def task1(numbers, boards, task):
+def bingo(numbers, boards, task):
     won_boards = set()
     for n in numbers:
         for board in range(len(boards)):
@@ -61,8 +61,8 @@ def run():
                     if num != '':
                         arr.append((int(num), False))
                 boards[-1].append(arr)
-        print(task1(numbers, boards, 1))
-        print(task1(numbers, boards, 2))
+        print(bingo(numbers, boards, 1))
+        print(bingo(numbers, boards, 2))
 
 
 run()

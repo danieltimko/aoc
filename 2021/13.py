@@ -10,8 +10,6 @@ def print_grid(dots):
 
 
 def fold_val(val, n):
-    if (val if val < n else 2 * n - val) < 0:
-        print('here')
     return val if val < n else 2 * n - val
 
 

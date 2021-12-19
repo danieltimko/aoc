@@ -1,13 +1,11 @@
-from __future__ import annotations
-
 from math import floor, ceil
-from typing import List
+from typing import List, Union
 
 
 class SnailfishNumber:
     def __init__(self, s, depth=0):
         self.depth: int = depth
-        self.items: List[SnailfishNumber | int] = []
+        self.items: List[Union[SnailfishNumber, int]] = []
         self.parse(s)
 
     def __str__(self):

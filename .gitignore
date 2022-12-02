@@ -1,4 +1,6 @@
 .idea
 input
+input.txt
 tmp*
 temp*
+__pycache__

@@ -16,6 +16,11 @@ def read_n_lines_one_string() -> [str]:
         return list(map(lambda line: line.strip(), f.readlines()))
 
 
+def read_grid() -> [[str]]:
+    with open(INPUT_FILE_PATH) as f:
+        return list(map(lambda line: list(line.strip()), f.readlines()))
+
+
 def read_one_line_n_numbers(sep=',') -> [int]:
     with open(INPUT_FILE_PATH) as f:
         return list_to_int(f.readlines()[0].split(sep))

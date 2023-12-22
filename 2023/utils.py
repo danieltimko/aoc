@@ -11,3 +11,7 @@ def lcm(arr):
     for n in arr:
         result = (n * result) // (math.gcd(n, result))
     return result
+
+
+def range_intersect(r1, r2):
+    return range(max(r1.start, r2.start), min(r1.stop, r2.stop)) or None

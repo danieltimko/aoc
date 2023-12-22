@@ -1,4 +1,5 @@
 from input_utils import *
+from utils import *
 
 
 class Part:
@@ -67,10 +68,6 @@ def intersect(restrictions, restriction):
     var = restriction[0]
     new_restrictions[var] = range_intersect(restrictions[var], new_range)
     return new_restrictions
-
-
-def range_intersect(r1, r2):
-    return range(max(r1.start, r2.start), min(r1.stop, r2.stop)) or None
 
 
 def options_count(restrictions):

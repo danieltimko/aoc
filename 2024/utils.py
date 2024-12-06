@@ -1,6 +1,7 @@
 import math
 
 from collections import defaultdict
+from copy import deepcopy
 
 
 def compute_lcm(x, y):

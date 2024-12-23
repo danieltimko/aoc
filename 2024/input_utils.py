@@ -1,3 +1,5 @@
+from collections import  defaultdict
+
 
 INPUT_FILE_PATH = "input.txt"
 
@@ -60,9 +62,9 @@ def read_n_groups_n_lines_n_numbers(sep=',') -> [[[int]]]:
 
 def read_graph(sep=' ', weighted=False, bidirectional=True) -> dict:
     lines = read_n_lines_n_strings(sep)
-    graph = dict()
+    graph = defaultdict(lambda: [])
     for line in lines:
         graph[line[0]].append((line[1], int(line[2])) if weighted else line[1])
         if bidirectional:
-            graph[line[1]].append((line[0], int(line[2])) if weighted else line[1])
+            graph[line[1]].append((line[0], int(line[2])) if weighted else line[0])
     return graph
